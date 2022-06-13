@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "BREAKING: Ecuador Announces Expansion of Galápagos Marine Reserve",
+      "content": "Santa Cruz, Galápagos, January 14, 2022 – This afternoon, in a historic victory for ocean conservation efforts in Galápagos and worldwide, Ecuadorian President Guillermo Lasso officially signed the declaration to expand the boundaries of the Galápagos Marine Reserve by 60,000 square kilometers (23,166 square miles) bringing the total area to an incredible 198,000 square kilometers (76,448 square miles) of protected marine habitat. The expansion includes a 30,000-square-kilometer “no-take” migratory superhighway – the Galápagos-Cocos Swimway aka the Hermandad Marine Reserve – that connects the Galápagos Marine Reserve with protected Costa Rican waters."
+    },
+    {
+      "id": 2,
+      "title": "Education for Sustainability: Overview of Education Initiatives",
+      "content": "Galapagos Conservancy believes that the extent to which Galapagos remains the world’s most environmentally-intact oceanic archipelago depends largely on how well those who live in Galapagos understand and embrace their pivotal role in shaping a sustainable society. High-quality Education for Sustainability can help lay the foundation for such a society."
+    },
+    {
+      "title": "Most people admit having no idea which animals are going extinct: poll",
+      "content": "Nearly seven in 10 adults in the US are under-informed about endangered animals, a new survey reveals. A poll of 2,000 Americans found that 68% of them are not “very informed” about which species are thriving or which ones are on the brink of extinction, reported South West News Service on Monday.",
+      "id": 3
+    }
+  ]
+}
