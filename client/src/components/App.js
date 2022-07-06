@@ -60,7 +60,7 @@ function App() {
           <ItemForm setRefresh={setRefresh} refresh={refresh} />
         </Route>
         <Route exact path="/">
-          <Home setRefresh={setRefresh} refresh={refresh}  articles={articles}/>
+          <Home setRefresh={setRefresh} refresh={refresh}  articles={articles} setArticles={setArticles}/>
         </Route>
 
       </Switch>

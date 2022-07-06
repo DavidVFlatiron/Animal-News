@@ -4,12 +4,13 @@ import { Link, Route } from "react-router-dom"
 import Article from "./Article";
 
 function Home(props) {
-  const { articles, refresh, setRefresh } = props;
+  const { articles, refresh, setRefresh, setArticles } = props;
+   
 
   return (<div className = "home">
     <h1> The Latest in Animal News</h1>
     <div className="articles-container">
-      {articles.map((index,key)=>{return <Article key={key} index={index} refresh={refresh} setRefresh={setRefresh}/>})}
+      {articles.map((index,key)=>{return <Article key={key} index={index} refresh={refresh} setRefresh={setRefresh} articles= {articles} setArticles={setArticles}/>})}
     </div>
    
     </div>)
