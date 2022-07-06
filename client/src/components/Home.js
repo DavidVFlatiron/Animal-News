@@ -6,7 +6,6 @@ import Article from "./Article";
 function Home(props) {
   const { articles, refresh, setRefresh } = props;
 
-  console.log(articles);
   return (<div className = "home">
     <h1> The Latest in Animal News</h1>
     <div className="articles-container">

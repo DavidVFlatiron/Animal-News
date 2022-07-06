@@ -11,6 +11,9 @@ import '../App.css'
 function App() {
   const [articles, setArticles] = useState([]);
   const [refresh,setRefresh] = useState(false);
+  const [searchTerm,setSearchTerm] = useState("Ecuador");
+  const [searchResults,setSearchResults] = useState([]);
+
 
   useEffect(() => {
     fetch("http://localhost:3000/articles")
@@ -20,9 +23,32 @@ function App() {
       });
   }, [refresh]);
 
+  function updateSearchTerm(e){
+    setSearchTerm(e.target.value);
+  };
+
+  function search(){
+    const results = [];
+    for (let i = 0; i < articles.length;i++){
+      if (articles[i].title.includes(searchTerm) || articles[i].content.includes(searchTerm) ){
+        results.push(articles[i]);
+      }
+    };
+    setSearchResults(results);
+    return results;
+  }
+
   return (
     <div>
       <NavBar />
+      <div>
+        <input onChange={updateSearchTerm} value={searchTerm}></input>
+        <button onClick={search}>Submit</button>
+      </div>
+      <div>
+      {searchResults.length > 0 ? <h2>Search Results</h2>:null}
+        {searchResults.length > 0 ? searchResults.map((index,key)=><p key={key}>{index.title}</p>):null}
+      </div>
       <Switch>
         <Route exact path="/about">
           <About />

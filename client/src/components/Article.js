@@ -2,6 +2,11 @@ import { useState} from 'react';
 function Article(props){
     const { index, refresh, setRefresh } = props;
     const [content,setContent] = useState(index.content)
+    const [score,setScore] = useState(0);
+
+    function upvote(){
+      setScore(score+1);
+    }
 
     function handleContentChange(event) {
         setContent(event.target.value);
@@ -32,6 +37,10 @@ function Article(props){
     return (<div className="article">
          <h2>{index.title}</h2>
         <p>{index.content}</p>
+        <div className="upvote">
+           <p>{score} upvotes</p>
+           <button onClick={upvote}>Upvote</button>
+        </div>
         <div className="edit">
           <label><p>Want to correct something? </p></label>
           <input placeholder={'edit'} type="text" value={content} onChange={handleContentChange} />

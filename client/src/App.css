@@ -22,3 +22,8 @@ body {
 .article .edit {
   display: flex;
 }
+.upvote {
+  display: flex;
+  background-color: black;
+  color:white;
+}
